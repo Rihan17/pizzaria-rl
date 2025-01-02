@@ -1,0 +1,33 @@
+
+	.login{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url("https://img.freepik.com/premium-photo/pepperoni-pizza-black-background-hot-pepperoni-pizza-top-view-banner-generative-ai_446633-8398.jpg?w=1060");
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -1;
+	}
+
+	.lablogin{
+		color: #FFFFFF;
+	}
+
+	.labsenha{
+		color: #FFFFFF;
+	}
+
+	.caixalogin{
+		padding: 40px;
+		border: 2px solid #FFFFFF;
+		border-radius: 10px;
+	}
+
+	.form-control{
+		background-color: #CDCDCD;
+	}
+
+	body{
+		background-image: url("https://img.freepik.com/premium-photo/pepperoni-pizza-black-background-hot-pepperoni-pizza-top-view-banner-generative-ai_446633-8398.jpg?w=1060");
+				background-repeat: no-repeat;
+	}

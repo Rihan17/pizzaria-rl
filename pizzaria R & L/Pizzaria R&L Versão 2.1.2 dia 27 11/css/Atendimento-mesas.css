@@ -1,0 +1,35 @@
+.nav{
+	color: black;
+}
+.barra{
+	background-color: white;
+
+
+}
+body{
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url('fundo.jpg');
+}
+.btn-secondary{
+background-color: #8C0404;
+
+}
+.btn-secondary:hover{
+background-color:orangered;
+}
+.btn-outline-secondary{
+background-color: white;
+	}
+	label{
+	color: white;
+}
+hr{
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+.categoriatb{
+	color: white;
+	background-color: black;
+}

@@ -1,0 +1,46 @@
+<?php
+include('conexao.php');
+
+
+if ($_POST) {
+	if (isset($_POST['cd_usuario'])) {
+		// Atualização
+	} else
+		//Cadastro
+		addUser($_POST['nome'], $_POST['login'], $_POST['senha'], $_POST['tipo']);
+}
+
+if ($_POST) {
+	if (isset($_POST['cd_usuario'])) {
+		// Atualização
+		updateUser($_POST['cd_usuario'], $_POST['nome'], $_POST['login'], $_POST['senha'], $_POST['tipo']);
+	} else
+		//Cadastro
+		addUser($_POST['nome'], $_POST['login'], $_POST['senha'], $_POST['tipo']);
+}
+
+if (isset($_GET['todos'])) {
+	if ($_GET['todos'] == 'users') {
+		$todos = getUsers(0);
+		for ($i = 0; $i < $todos->num_rows; $i++) {
+			$lista[$i] = $todos->fetch_object();
+		}
+		echo json_encode($lista);
+	} else if ($_GET['todos'] == 'tipos') {
+		$todos = getTiposUsers();
+		for ($i = 0; $i < $todos->num_rows; $i++) {
+			$lista[$i] = $todos->fetch_object();
+		}
+		echo json_encode($lista);
+	}
+}
+
+if (isset($_GET['del'])) {
+	delUser($_GET['del']);
+}
+
+if (isset($_GET['usuario'])) {
+	$todos = getUsers($_GET['usuario']);
+	$lista = $todos->fetch_array();
+	echo json_encode($lista);
+}
